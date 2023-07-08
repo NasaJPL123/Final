@@ -1,0 +1,58 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  padding: 10%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.content{
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 5%;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    padding-right: 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .error {
+    color: red;
+  }
+body{
+  background: linear-gradient(#9120e7, #5b08d0);
+  font-family: 'Courier New', Courier, monospace;
+  height: 100vh;
+}
+.register{
+  padding: 10px;
+  padding-right: 0;
+  width: 100%;
+  background: linear-gradient(271.15deg, #FE904B 7.64%, #FB724C 90.68%), #EE5757;
+  backdrop-filter: blur(1.43525px);
+  border-radius: 5px;
+  text-align: center;
+}
+.or{
+  padding: 15px;
+  padding-right: 0;
+  width: 100%;
+  text-align: center;
+}
+.pic{
+  padding-top: 20%;
+}
