@@ -53,7 +53,7 @@ function validateForm() {
       };
       localStorage.setItem('userData', JSON.stringify(userData));
   
-      window.location.href = '/src/screens/User/HomePage/index.html';
+      window.location.href = '/src/screens/Auth/login /login.html';
     }
   }
   
