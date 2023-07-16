@@ -332,7 +332,7 @@ a:focus {
   display: inline-block;
   padding: 12px 15px;
   background-color: #e6c511;
-  color: #ffffff;
+  color: #000000;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -431,7 +431,7 @@ a:focus {
   top: 0;
   left: 0;
   background-color: #f0d43a;
-  color: #ffffff;
+  color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,7 +458,7 @@ a:focus {
   display: inline-block;
   padding: 10px 50px;
   background-color: #f0d43a;
-  color: #ffffff;
+  color: #000000;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -601,7 +601,7 @@ a:focus {
   display: inline-block;
   padding: 10px 45px;
   background-color: #f0d43a;
-  color: #ffffff;
+  color: #000000;
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;

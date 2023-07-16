@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read, Write, Update, Delete Data v9.x.x</title>
+    <style>
+        label { display: block; width: 80px; }
+        input, select{width: 120px;}
+    </style>
+</head>
+<body>
+    <label>Name</label> <input id="Namebox" type="text">
+    <label>Price</label> <input id="Pricebox" type="text">
+    <label>Description</label> <input id="Descbox" type="text">
+    <hr>
+    <button id="Insbtn">INSERT</button>
+    <button id="Selbtn">SELECT</button>
+    <button id="Updbtn">UPDATE</button>
+    <button id="Delbtn">DELETE</button>
+    <button id="Table">GET TABLE</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+    <script src="/test.js" type="module"></script>
+</body>
+</html>
