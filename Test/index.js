@@ -1,58 +1,89 @@
-// Define the function to display data
-function displayData(dataArray) {
-  const container = document.querySelector(".container"); // Assuming the container has the class "container"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
+import {  
+    getDatabase,
+    set,
+    get,
+    update,
+    remove,
+    ref,
+    child,
+} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
 
-  // Loop through the data array
-  dataArray.forEach((item) => {
-    // Create the elements for the data
-    const divCard = document.createElement("div");
-    divCard.className = "col-sm-6 col-xl-3";
+const firebaseConfig = {
+    apiKey: "AIzaSyCj9iGoIWDCxlNMaFQgc7Tr8HvtpVSQnKE",
+    authDomain: "final-8225b.firebaseapp.com",
+    databaseURL: "https://final-8225b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "final-8225b",
+    storageBucket: "final-8225b.appspot.com",
+    messagingSenderId: "391672046052",
+    appId: "1:391672046052:web:03499c4edce5676c75a7f1",
+    measurementId: "G-R50HQ2J550"
+  };
 
-    const box = document.createElement("div");
-    box.className = "box";
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  const analytics = getAnalytics(app);
 
-    const anchor = document.createElement("a");
-    anchor.href = "";
+  // Define the function to create and display the div cards
+// Define the function to create and display the div cards
+// Define the function to create and display the div cards
+// Define the function to create and display the div cards
+// Define the function to create and display the div cards
+// Define the function to create and display the div cards
+function displayDivCards(dataArray) {
+  const rowContainer = document.querySelector('.row');
+  const totalImages = 6; // Total number of images
 
-    const imgBox = document.createElement("div");
-    imgBox.className = "img-box";
+  dataArray.forEach((item, index) => {
+    const divCol = document.createElement('div');
+    divCol.classList.add('col-sm-6', 'col-xl-3');
 
-    const img = document.createElement("img");
-    img.src = "/images/w6.png";
-    img.alt = "";
+    const divBox = document.createElement('div');
+    divBox.classList.add('box');
 
-    const detailBox = document.createElement("div");
-    detailBox.className = "detail-box";
+    const cardLink = document.createElement('a');
+    cardLink.href = '';
 
-    const nameHeading = document.createElement("h6");
-    nameHeading.textContent = item.name;
+    const imgBox = document.createElement('div');
+    imgBox.classList.add('img-box');
+    const img = document.createElement('img');
+    const imageIndex = (index % totalImages) + 1; // Calculate the image index based on the card index
+    img.src = `/images/w${imageIndex}.png`;
+    img.alt = '';
 
-    const priceHeading = document.createElement("h6");
-    priceHeading.textContent = "Price:";
-
-    const priceSpan = document.createElement("span");
-    priceSpan.textContent = item.price;
-
-    // Append the elements to their respective parents
     imgBox.appendChild(img);
 
-    detailBox.appendChild(nameHeading);
+    const detailBox = document.createElement('div');
+    detailBox.classList.add('detail-box');
+    const nameHeading = document.createElement('h6');
+    nameHeading.textContent = item.Name; // Assuming the name property exists in the data
+
+    const priceHeading = document.createElement('h6');
+    priceHeading.textContent = 'Price: ';
+
+    const priceSpan = document.createElement('span');
+    priceSpan.textContent = '$' + item.Price; // Assuming the price property exists in the data
+
     priceHeading.appendChild(priceSpan);
+    detailBox.appendChild(nameHeading);
     detailBox.appendChild(priceHeading);
 
-    anchor.appendChild(imgBox);
-    anchor.appendChild(detailBox);
+    const newSpan = document.createElement('div');
+    newSpan.textContent = 'New';
+    newSpan.classList.add('new');
 
-    box.appendChild(anchor);
+    cardLink.appendChild(imgBox);
+    cardLink.appendChild(detailBox);
+    cardLink.appendChild(newSpan);
 
-    divCard.appendChild(box);
-
-    // Append the div card to the container
-    container.appendChild(divCard);
+    divBox.appendChild(cardLink);
+    divCol.appendChild(divBox);
+    rowContainer.appendChild(divCol);
   });
 }
 
-// Modify the GetAllData function to display data
+// Define the GetAllData function
 function GetAllData() {
   const dbRef = ref(db, "Products");
 
@@ -61,9 +92,9 @@ function GetAllData() {
       if (snapshot.exists()) {
         const data = snapshot.val();
         const dataArray = Object.values(data);
-
-        // Call the displayData function to display the data
-        displayData(dataArray);
+        console.log("Data from Realtime Database:");
+        console.log(dataArray);
+        displayDivCards(dataArray);
       } else {
         console.log("No data found");
       }
