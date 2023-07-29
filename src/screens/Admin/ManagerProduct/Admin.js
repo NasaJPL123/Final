@@ -69,43 +69,47 @@ var getTbl = document.getElementById("Table");
 // INSERT DATA FUNCTION
 function InsertData() {
     set(ref(db, "Products/" + namebox.value), {
-        Name: namebox.value,
-        Price: pricebox.value,
-        Description: descbox.value
+      Name: namebox.value,
+      Price: pricebox.value,
+      Description: descbox.value,
     })
-        .then(() => {
-            alert("Data stored successfully");
-        })
-        .catch((error) => {
-            alert("Unsuccessful. Error: " + error);
-        });
-}
+      .then(() => {
+        alert("Data stored successfully");
+        location.reload(); // Refresh the page after successful insertion
+      })
+      .catch((error) => {
+        alert("Unsuccessful. Error: " + error);
+      });
+  }
 
 // UPDATE DATA FUNCTION
 function UpdateData() {
     update(ref(db, "Products/" + namebox.value), {
-        Name: namebox.value,
-        Price: pricebox.value,
-        Description: descbox.value
+      Name: namebox.value,
+      Price: pricebox.value,
+      Description: descbox.value,
     })
-        .then(() => {
-            alert("Data updated successfully");
-        })
-        .catch((error) => {
-            alert("Unsuccessful. Error: " + error);
-        });
-}
+      .then(() => {
+        alert("Data updated successfully");
+        location.reload(); // Refresh the page after successful update
+      })
+      .catch((error) => {
+        alert("Unsuccessful. Error: " + error);
+      });
+  }
 
 // DELETE DATA FUNCTION
 function DeleteData() {
     remove(ref(db, "Products/" + namebox.value))
-        .then(() => {
-            alert("Data removed successfully");
-        })
-        .catch((error) => {
-            alert("Unsuccessful. Error: " + error);
-        });
-}
+      .then(() => {
+        alert("Data removed successfully");
+        location.reload(); // Refresh the page after successful deletion
+      })
+      .catch((error) => {
+        alert("Unsuccessful. Error: " + error);
+      });
+  }
+
 
 function SelectData() {
     const dbref = ref(db);

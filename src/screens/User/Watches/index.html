@@ -29,7 +29,8 @@
   <link href="/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="/css/responsive.css" rel="stylesheet" />
-
+  <link rel="stylesheet" href="/src/screens/Admin/ManagerProduct/style.css">
+  <script src="https://kit.fontawesome.com/fce4e3133b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -67,12 +68,16 @@
             <a href="/src/screens/Auth/login /login.html">
               <i class="fa fa-user" aria-hidden="true"></i>
             </a>
-            <a href="">
-              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            <a>
+              <i class="fa fa-cart-plus" aria-hidden="true" onclick="toggleCart()"></i>
             </a>
-            <a href="">
+            <a id="search-icon" onclick="toggleSearchBar()">
               <i class="fa fa-search" aria-hidden="true"></i>
             </a>
+          </div>
+          <div id="searchBar">
+            <input type="text" id="searchInput" placeholder="Search for watches...">
+            <button id="searchButton" onclick="searchCards()">Search</button>
           </div>
         </div>
       </nav>
@@ -80,6 +85,56 @@
   </header>
 
   <section class="shop_section layout_padding">
+    <div class="cart-overlay" style="display: none;">
+      <div id="Cart" class="cart-container">
+        <div class="col-lg-4 bg-grey">
+          <div class="p-5">
+            <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+            <hr class="my-4">
+
+            <div class="d-flex justify-content-between mb-4">
+              <h5 class="text-uppercase">items 3</h5>
+              <h5>Total: €<span id="totalValue">0.00</span></h5>
+            </div>
+
+            <h5 class="text-uppercase mb-3">Shipping</h5>
+
+            <div class="mb-4 pb-2">
+              <select class="select">
+                <option value="1">Standard-Delivery- €5.00</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+              </select>
+            </div>
+
+            <h5 class="text-uppercase mb-3">Give code</h5>
+
+            <div class="mb-5">
+              <div class="form-outline">
+                <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
+                <label class="form-label" for="form3Examplea2">Enter your code</label>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="d-flex justify-content-between mb-5">
+              <h5 class="text-uppercase">Total price</h5>
+              <h5>€<span id="totalPrice">0.00</span></h5>
+            </div>
+            <button type="button" class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark">Register</button>
+          </div>
+        </div>
+        <div class="cartList">
+          <i class="fa-solid fa-2xl fa-xmark" onclick="toggleCart()"
+            style="position: absolute; right: 0; margin: 10px;"></i>
+          <div class="cardContent">
+            <ul id="cartList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -110,6 +165,7 @@
                 </span>
               </div>
             </a>
+            <button id="Insbtn" class="button1"> Add to cart </button>
           </div>
         </div>
         <div id="container">
@@ -227,7 +283,8 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
-  <script src="/Test/index.js" type="module"></script>
+  <script src="/src/screens/User/Watches/index.js" type="module"></script>
+  <script src="/src/screens/User/Watches/toggle.js"></script>
 </body>
 
 </html>
