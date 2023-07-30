@@ -28,21 +28,11 @@ const db = getDatabase(app);
 
 const username = document.getElementById('userInp');
 const pass = document.getElementById('passInp');
-document.addEventListener("DOMContentLoaded", () => {
-  // Get the elements
-  const form = document.getElementById("loginForm");
-  // Check if the elements are not null before attaching the event listener
-  if (form) {
-    form.addEventListener("submit", AuthenticateUser);
-    event.preventDefault();
-  }
-});
+document.getElementById('sub-btn').addEventListener('click', AuthenticateUser);
 
-function AuthenticateUser(event) {
-  event.preventDefault(); // Prevent the default form submission
+function AuthenticateUser() {
+  event.preventDefault();
   const dbRef = ref(db);
-  const username = document.getElementById("userInp");
-  const pass = document.getElementById("passInp");
   const usernameValue = username.value; // Extract the username value from the input
   const passValue = pass.value; // Extract the password value from the input
 
@@ -64,6 +54,3 @@ function AuthenticateUser(event) {
       alert("Error fetching user data: " + error.message);
     });
 }
-
-  
-  

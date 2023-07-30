@@ -66,9 +66,6 @@ function Validation() {
 }
 
 function RegisterUser() {
-  
-  event.preventDefault();
-
   if (!Validation()) {
     return;
   }
