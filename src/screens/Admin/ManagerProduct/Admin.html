@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/fce4e3133b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
@@ -71,26 +72,11 @@
                   <span>General</span>
                 </li>
                 <li class="sidebar-dropdown">
-                  <a href="#">
+                  <a href="/src/screens/Admin/ManagerUser/index.html">
                     <i class="fa fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
+                    <span> Accounts</span>
                     <span class="badge badge-pill badge-warning">New</span>
                   </a>
-                  <div class="sidebar-submenu">
-                    <ul>
-                      <li>
-                        <a href="#">Dashboard 1
-                          <span class="badge badge-pill badge-success">Pro</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">Dashboard 2</a>
-                      </li>
-                      <li>
-                        <a href="#">Dashboard 3</a>
-                      </li>
-                    </ul>
-                  </div>
                 </li>
                 <li class="sidebar-dropdown">
                   <a href="#">
@@ -224,10 +210,11 @@
         </nav>
         <!-- sidebar-wrapper  -->
         <main class="page-content">
+          <h3 class="mb-3"> Products </h3>
                 <div class="top">
-                    <label>Name</label> <input id="Namebox" type="text">
-                    <label>Price</label> <input id="Pricebox" type="text">
-                    <label>Description</label> <input id="Descbox" type="text">
+                    <label>Name</label> <input id="Namebox" type="text"> <br>
+                    <label>Price</label> <input id="Pricebox" type="text"><br>
+                    <label>Description</label> <input id="Descbox" type="text"><br>
                     <hr>
                     <button id="Insbtn" class="button1">INSERT</button>
                     <button id="Selbtn" class="button1">SELECT</button>

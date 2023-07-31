@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/screens/Auth/login /login.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+    }
+  </style>
+<link rel="stylesheet" href="/src/screens/Auth/login /login.css">
 </head>
 <body>
-    <div class="container">
-        <div class="screen">
-            <div class="screen__content">
-                <form class="login">
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="text" class="login__input" placeholder="Username" id="userInp">
-                    </div>
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Password" id="passInp">
-                    </div>
-                    <button class="button login__submit" type="submit" id="sub_btn">
-                        <span class="button__text">Log In Now</span>
-                        <i class="button__icon fas fa-chevron-right"></i>
-                    </button>	
-                </form>
-                <a href="/src/screens/Auth/signin /signin.html" class="badge badge-secondary py-1 w-100" class="button">Want to create an Account?</a>
+  <div class="container">
+    <div class="screen">
+        <div class="screen__content">
+          <div class="mb-5">
+            <h3 class="mb-3">Login</h3>
+            <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+                <input type="text" class="login__input" placeholder="Username" id="userInp">
             </div>
-            <div class="screen__background">
-                <span class="screen__background__shape screen__background__shape4"></span>
-                <span class="screen__background__shape screen__background__shape3"></span>		
-                <span class="screen__background__shape screen__background__shape2"></span>
-                <span class="screen__background__shape screen__background__shape1"></span>
-            </div>		
+            <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+                <input type="password" class="login__input" placeholder="Password" id="passInp">
+            </div>
+            <button type="submit" id="sub-btn" class="btn btn-outline-primary mb-3">Login</button>
+            <a href="/src/screens/Auth/signin /signin.html" class="badge badge-secondary py-1 w-100">Want to create an Account?</a>
+          </div>
         </div>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>		
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+        </div>		
     </div>
-    <script src="/src/screens/Auth/login /login.js" type="module" ></script>
+</div>
+<script src="/src/screens/Auth/login /login.js" type="module"></script>
 </body>
 </html>
