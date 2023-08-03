@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/screens/Auth/login /login.css">
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+    }
+  </style>
+<link rel="stylesheet" href="/src/screens/Auth/login /login.css">
 </head>
 <body>
-    <div class="container">
-        <div class="pic">
-            <img src="/images/login-page-4468581-3783954.webp" alt="">
-        </div>
-        <div class="content">
-            <h1 style="color: #ffffff;">ADMIN LOGIN</h1>
-            <form style="color: #ffffff;">
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
-                    <div id="emailError" class="error"></div>
-                </div>
-                <div>
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" required>
-                    <div id="passwordError" class="error"></div>
-                </div>
-                <br>
-                <div class="or">
-                    <img src="/images/Group 578.svg" alt="" onclick="validateForm()">
-                </div>
-                
-            </form>
+  <div class="container">
+    <div class="screen">
+        <div class="screen__content">
+          <div class="mb-5">
+            <h3 class="mb-3">Admin Login</h3>
+            <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+                <input type="text" class="login__input" placeholder="Username" id="userInp">
+            </div>
+            <div class="login__field">
+                <i class="login__icon fas fa-lock"></i>
+                <input type="password" class="login__input" placeholder="Password" id="passInp">
+            </div>
+            <button type="submit" id="sub-btn" class="btn btn-outline-primary mb-3">Login</button>
           </div>
         </div>
-    <script src="/src/screens/Admin/login /login.js"></script>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>		
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+        </div>		
+    </div>
+</div>
+<script src="/src/screens/Admin/login /login.js" type="module"></script>
 </body>
 </html>

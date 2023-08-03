@@ -84,7 +84,8 @@ function RegisterUser() {
         fullname: name.value,
         email: email.value,
         username: username.value,
-        password: pass.value
+        password: pass.value,
+        role: "user"
       }).then(() => {
         alert("User added successfully");
       }).catch((error) => {

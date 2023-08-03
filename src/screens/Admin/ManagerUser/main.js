@@ -107,7 +107,7 @@ const app = initializeApp(firebaseConfig);
             nameCell.textContent = data[key].username;
             priceCell.textContent = data[key].email;
             descCell.textContent = data[key].password;
-            firstCell.textContent = data[key].fullname;
+            firstCell.textContent = data[key].role;
   
             row.appendChild(nameCell);
             row.appendChild(priceCell);
