@@ -88,6 +88,7 @@ function RegisterUser() {
         role: "user"
       }).then(() => {
         alert("User added successfully");
+        window.location.href = "/src/screens/Auth/login /login.html"
       }).catch((error) => {
         alert("Error: " + error);
       });
